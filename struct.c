@@ -20,6 +20,30 @@ struct  myStructure {    // Structure declaration
 
 // To access members of the struct, use the dot syntax (.)
 
+
+
+
+
+
+// Create different struct variables
+void		tmp()
+{
+		struct myStructure s1;
+		struct myStructure s2;
+
+		s1.myNum = 515;
+		s1.myLetter = 'M';
+
+		s2.myNum = 28;
+		s2.myLetter = 'B';
+}
+
+
+
+
+
+
+
 int     main()
 {
     struct myStructure s1;
@@ -30,6 +54,8 @@ int     main()
 		// Print format
 		printf("My number: %d\n", s1.myNum);
 		printf("My char: %c\n", s1.myLetter);
+
+		tmp();
 
     return 0;
 }
