@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // What are C structs (Structures)
 
@@ -13,6 +14,7 @@
 struct  myStructure {    // Structure declaration
     int     myNum;      // Member (int variable)
     char    myLetter;   // My letter
+		char		myString[20]; // String
 };                      // End the structure with a semicolon
 
 // Use the struct keyword inside the main() METHOD, followed by the name of the structure
@@ -38,11 +40,32 @@ void		tmp()
 		s2.myLetter = 'B';
 }
 
+void		error()
+{
+		struct myStructure s1;
 
+		// You cannot assign a value to an array (like this):
+		// Trying to assign a value to the string
+		// s1.myString = "Une chaine";
 
+		strcpy(s1.myString, "Salut");
 
+		printf("%s", s1.myString);
+}
 
+void		one_line()
+{
+		// You can also assign values to members of a struct variable at declaration time, in one line.
 
+		// Create a structure variable and assign values to it
+		struct myStructure s1 = {515, 'M', "Saluuuuut"};
+}
+
+void		copy()
+{
+	struct myStructure s1 = {515, 'M', "Saluuuut"};
+	struct myStructure s2 = s1;
+}
 
 int     main()
 {
@@ -56,6 +79,7 @@ int     main()
 		printf("My char: %c\n", s1.myLetter);
 
 		tmp();
+		error();
 
     return 0;
 }
