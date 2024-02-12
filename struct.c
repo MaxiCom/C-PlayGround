@@ -8,7 +8,16 @@
 // struct Keyword
 // declare each membre inside curly braces
 
-struct MyStructure {    // Structure declaration
+struct  MyStructure {    // Structure declaration
     int     myNum;      // Member (int variable)
     char    myLetter;   // My letter
 };                      // End the structure with a semicolon
+
+// Use the struct keyword inside the main() METHOD, followed by the name of the structure
+// and then the name of the structure variable
+int     main()
+{
+    struct MyStructure s1;
+
+    return 0;
+}
